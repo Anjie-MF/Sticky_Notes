@@ -28,7 +28,6 @@ class App extends Component {
   };
 
   onType = (editMeId, updatedKey, updatedValue) => {
-    //EDITMEid is the note that is being edited; UPDATEDKey is title of desc field ; UPDATEvalue is the value of the title of desc
     const updatedNotes = this.state.notes.map((note) => {
       if (note.id !== editMeId) {
         return note;
@@ -48,8 +47,7 @@ class App extends Component {
     const newSearchText = text.toLowerCase();
     const updatedNotes = this.state.notes.map((note) => {
       if (!newSearchText) {
-        note.doesMatchSearch = true;
-        return note;
+return { ...note, doesMatchSearch: hasMatch };
       } else {
         const title = note.title.toLowerCase();
         const description = note.description.toLowerCase();
