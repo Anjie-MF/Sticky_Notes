@@ -17,6 +17,25 @@ A React app for creating, editing, searching, and deleting sticky notes — with
 - `localStorage` for persistence
 - No external UI libraries — layout and styling written from scratch
 
+## Dependencies
+
+| Package | Version |
+|---|---|
+| react | 16.8.6 |
+| react-dom | 16.8.6 |
+| react-scripts | 5.0.1 |
+
+## Deployment
+
+This app is deployed on Vercel. To deploy your own copy:
+
+1. Push the repo to GitHub
+2. Go to [vercel.com](https://vercel.com) and import the repository
+3. Vercel will auto-detect it as a React app — click Deploy
+4. Your live URL will be generated automatically
+
+Live site: https://sticky-notes-pearl-two.vercel.app/
+
 ## What I Built
 
 This project gave me hands-on practice with core React concepts:
@@ -35,7 +54,7 @@ npm install
 npm start
 ```
 
-The app will run at `https://sticky-notes-pearl-two.vercel.app/`.
+The app will run at http://localhost:3000
 
 ## Project Structure
 
