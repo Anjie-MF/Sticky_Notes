@@ -51,8 +51,8 @@ src/
 
 ## Screenshots
 
-> *(Add a screenshot here once deployed — even a simple one goes a long way on a README)*
-> ![App screenshot](screenshots/app-preview.png)
+![Sticky Notes Screenshot](images/sticky_notes_screenshot.png)
+
 
 ## What I'd Add Next
 
