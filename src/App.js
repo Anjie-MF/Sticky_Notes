@@ -47,8 +47,7 @@ class App extends Component {
     const newSearchText = text.toLowerCase();
     const updatedNotes = this.state.notes.map((note) => {
       if (!newSearchText) {
-        note.doesMatchSearch = true;
-        return note;
+return { ...note, doesMatchSearch: hasMatch };
       } else {
         const title = note.title.toLowerCase();
         const description = note.description.toLowerCase();
