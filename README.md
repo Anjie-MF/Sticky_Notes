@@ -50,8 +50,6 @@ src/
 ```
 
 ## Screenshots
-
-> *(Add a screenshot here once deployed — even a simple one goes a long way on a README)*
 > ![App screenshot](screenshots/app-preview.png)
 
 ## What I'd Add Next
