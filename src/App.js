@@ -17,7 +17,6 @@ class App extends Component {
 
   addNote = () => {
     const newNote = {
-      //add new note
       id: Date.now(),
       title: "",
       description: "",
@@ -28,19 +27,19 @@ class App extends Component {
   };
 
   onType = (editMeId, updatedKey, updatedValue) => {
-    //EDITMEid is the note that is being edited; UPDATEDKey is title of desc field ; UPDATEvalue is the value of the title of desc
     const updatedNotes = this.state.notes.map((note) => {
       if (note.id !== editMeId) {
         return note;
       } else {
         if (updatedKey === "title") {
-          return { ...note, title: updatedValue };
+          note.title = updatedValue;
+          return note;
         } else {
-          return { ...note, description: updatedValue };
+          note.description = updatedValue;
+          return note;
         }
       }
     });
-
     this.setState({ notes: updatedNotes });
   };
 
@@ -67,7 +66,8 @@ class App extends Component {
   };
 
   removeNote = (noteId) => {
-    const updatedNotes = this.state.notes.filter((note) => note.id !== noteId);
+    const  notIdMatch = (note) => note.id !== notedId;
+    const updatedNotes = this.state.notes.filter(notIdMatch);
     this.setState({ notes: updatedNotes });
   };
 

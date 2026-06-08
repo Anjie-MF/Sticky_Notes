@@ -20,21 +20,21 @@ const Note = (props) => {
   return (
     <li className="note">
       <input
-        className="note__title"
         type="text"
         aria-label="Title"
-        placeholder="ToDo Today"
         value={props.note.title}
         onChange={updateTitle}
+        placeholder="Today To-Do"
+        className="note__title"
       />
       <textarea
-        className="note__description"
         aria-label="Description"
-        placeholder="Take a nap!"
         value={props.note.description}
         onChange={updateDescription}
+        placeholder="Drink water!"
+        className="note__description"
       />
-      <span className="note__delete" onClick={clickDelete}>
+      <span onClick={clickDelete} className="note__delete" >
         X
       </span>
     </li>

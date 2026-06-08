@@ -12,7 +12,7 @@ const Header = (props) => {
         <button className="add-new" onClick={props.addNote}>
           + New Note
         </button>
-        <div>
+        <div className="search-field">
           <img
             src="magnifying-glass-solid-full.svg"
             alt="search icon"
