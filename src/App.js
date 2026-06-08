@@ -32,11 +32,9 @@ class App extends Component {
         return note;
       } else {
         if (updatedKey === "title") {
-          note.title = updatedValue;
-          return note;
+          return { ...note, title: updatedValue }
         } else {
-          note.description = updatedValue;
-          return note;
+          return { ...note, description: updatedValue }
         }
       }
     });
@@ -47,7 +45,7 @@ class App extends Component {
     const newSearchText = text.toLowerCase();
     const updatedNotes = this.state.notes.map((note) => {
       if (!newSearchText) {
-return { ...note, doesMatchSearch: hasMatch };
+        return { ...note, doesMatchSearch: true };
       } else {
         const title = note.title.toLowerCase();
         const description = note.description.toLowerCase();
@@ -65,7 +63,7 @@ return { ...note, doesMatchSearch: hasMatch };
   };
 
   removeNote = (noteId) => {
-    const  notIdMatch = (note) => note.id !== notedId;
+    const notIdMatch = (note) => note.id !== noteId;
     const updatedNotes = this.state.notes.filter(notIdMatch);
     this.setState({ notes: updatedNotes });
   };
